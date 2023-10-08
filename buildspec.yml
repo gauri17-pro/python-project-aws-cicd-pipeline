@@ -1,0 +1,16 @@
+version: 0.1
+
+phases:
+  pre_build:
+    commands:
+      - echo Prebuild ops
+      - pip3 install -r scripts/requirements.txt
+  build:
+    commands:
+      - echo Building the application
+  post_build:
+    commands:
+      - echo Build completed on `date`
+artifacts:
+  files:
+    - '**/*'

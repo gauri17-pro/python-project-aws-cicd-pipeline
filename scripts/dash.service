@@ -1,0 +1,9 @@
+[Unit]
+Description=Road Crash Dash
+After=multi-user.target
+[Service]
+Type=simple
+Restart=always
+ExecStart=/usr/bin/python3 /home/ec2-user/app.py -f /home/ec2-user/crash_data.csv
+[Install]
+WantedBy=multi-user.target
